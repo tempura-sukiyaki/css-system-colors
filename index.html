@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>System Color</title>
+    <script>
+document.documentElement.style.font = "message-box";
+document.documentElement.style.height = "100%";
+document.documentElement.style.margin = 0;
+document.documentElement.style.padding = 0;
+document.documentElement.style.width = "100%";
+document.addEventListener("DOMContentLoaded", e => {
+  document.body.style.backgroundColor = "window";
+  document.body.style.color = "windowtext";
+  document.body.style.font = "inherit";
+  document.body.style.height = "100%";
+  document.body.style.margin = 0;
+  document.body.style.padding = 0;
+  document.body.style.width = "100%";
+
+  const ul = document.body.appendChild(document.createElement("UL"));
+  ul.style.margin = 0;
+  ul.style.padding = 0;
+  [
+    "ActiveBorder",
+    "ActiveCaption",
+    "AppWorkspace",
+    "Background",
+    "ButtonFace",
+    "ButtonHighlight",
+    "ButtonShadow",
+    "ButtonText",
+    "CaptionText",
+    "GrayText",
+    "Highlight",
+    "HighlightText",
+    "InactiveBorder",
+    "InactiveCaption",
+    "InactiveCaptionText",
+    "InfoBackground",
+    "InfoText",
+    "Menu",
+    "MenuText",
+    "Scrollbar",
+    "ThreeDDarkShadow",
+    "ThreeDFace",
+    "ThreeDHighlight",
+    "ThreeDLightShadow",
+    "ThreeDShadow",
+    "Window",
+    "WindowFrame",
+    "WindowText",
+    "-moz-ButtonDefault",
+    "-moz-ButtonHoverFace",
+    "-moz-ButtonHoverText",
+    "-moz-CellHighlight",
+    "-moz-CellHighlightText",
+    "-moz-Combobox",
+    "-moz-ComboboxText",
+    "-moz-Dialog",
+    "-moz-DialogText",
+    "-moz-dragtargetzone",
+    "-moz-EvenTreeRow",
+    "-moz-Field",
+    "-moz-FieldText",
+    "-moz-html-CellHighlight",
+    "-moz-html-CellHighlightText",
+    "-moz-mac-accentdarkestshadow",
+    "-moz-mac-accentdarkshadow",
+    "-moz-mac-accentface",
+    "-moz-mac-accentlightesthighlight",
+    "-moz-mac-accentlightshadow",
+    "-moz-mac-accentregularhighlight",
+    "-moz-mac-accentregularshadow",
+    "-moz-mac-chrome-active",
+    "-moz-mac-chrome-inactive",
+    "-moz-mac-focusring",
+    "-moz-mac-menuselect",
+    "-moz-mac-menushadow",
+    "-moz-mac-menutextselect",
+    "-moz-MenuHover",
+    "-moz-MenuHoverText",
+    "-moz-MenuBarText",
+    "-moz-MenuBarHoverText",
+    "-moz-nativehyperlinktext",
+    "-moz-OddTreeRow",
+    "-moz-win-communicationstext",
+    "-moz-win-mediatext",
+    "-moz-win-accentcolor",
+    "-moz-win-accentcolortext",
+  ].forEach(color => {
+    const li = ul.appendChild(document.createElement("LI"));
+//    li.style.backgroundColor = color;
+    li.style.background = `linear-gradient(to right, ${color} 0%, ${color} 50%, window 100%)`;
+    li.style.textAlign = "right";
+    li.style.listStyleType = "none";
+    li.style.padding = "0.75em";
+    li.appendChild(document.createTextNode(color));
+  });
+});
+    </script>
+  </head>
+  <body></body>
+</html>
