@@ -2,7 +2,7 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8">
-    <title>System Color</title>
+    <title>System Colors</title>
     <script>
 document.documentElement.style.font = "message-box";
 document.documentElement.style.height = "100%";
@@ -92,9 +92,9 @@ document.addEventListener("DOMContentLoaded", e => {
     const li = ul.appendChild(document.createElement("LI"));
 //    li.style.backgroundColor = color;
     li.style.background = `linear-gradient(to right, ${color} 0%, ${color} 50%, window 100%)`;
-    li.style.textAlign = "right";
     li.style.listStyleType = "none";
     li.style.padding = "0.75em";
+    li.style.textAlign = "right";
     li.appendChild(document.createTextNode(color));
   });
 });
